@@ -1,0 +1,157 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Verificar se o usuário está autenticado
+        var isAuthenticated = sessionStorage.getItem('authenticated');
+
+        // Se não estiver autenticado, redirecione para a página de login
+        if (!isAuthenticated || isAuthenticated !== 'true') {
+            window.location.href = '../index.html';
+        }
+    });
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/clients.css">
+    <link rel="stylesheet" href="../assets/styles/sidebar.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../assets/scripts/sidebar.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <title>Clientes</title>
+</head>
+
+<body>
+    <main class="main">
+        <div class="main-content">
+            <h1>Página de Clientes</h1>
+            <table id="clientsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Jean Carlos</td>
+                        <td>cliente1@example.com</td>
+                        <td>(123) 456-7890</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Maria Silva</td>
+                        <td>cliente2@example.com</td>
+                        <td>(234) 567-8901</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Lucas Oliveira</td>
+                        <td>cliente3@example.com</td>
+                        <td>(345) 678-9012</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Amanda Santos</td>
+                        <td>cliente4@example.com</td>
+                        <td>(456) 789-0123</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Fernando Costa</td>
+                        <td>cliente5@example.com</td>
+                        <td>(567) 890-1234</td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>Larissa Souza</td>
+                        <td>cliente6@example.com</td>
+                        <td>(678) 901-2345</td>
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td>Rafaela Lima</td>
+                        <td>cliente7@example.com</td>
+                        <td>(789) 012-3456</td>
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>Anderson Pereira</td>
+                        <td>cliente8@example.com</td>
+                        <td>(890) 123-4567</td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>Gustavo Oliveira</td>
+                        <td>cliente9@example.com</td>
+                        <td>(901) 234-5678</td>
+                    </tr>
+
+                    <tr>
+                        <td>10</td>
+                        <td>Carla Martins</td>
+                        <td>cliente10@example.com</td>
+                        <td>(012) 345-6789</td>
+                    </tr>
+
+                    <tr>
+                        <td>11</td>
+                        <td>Roberto Silva</td>
+                        <td>cliente11@example.com</td>
+                        <td>(123) 456-7890</td>
+                    </tr>
+
+                    <tr>
+                        <td>12</td>
+                        <td>Sandra Oliveira</td>
+                        <td>cliente12@example.com</td>
+                        <td>(234) 567-8901</td>
+                    </tr>
+
+                    <tr>
+                        <td>13</td>
+                        <td>Felipe Santos</td>
+                        <td>cliente13@example.com</td>
+                        <td>(345) 678-9012</td>
+                    </tr>
+
+                    <tr>
+                        <td>14</td>
+                        <td>Juliana Costa</td>
+                        <td>cliente14@example.com</td>
+                        <td>(456) 789-0123</td>
+                    </tr>
+
+                    <tr>
+                        <td>15</td>
+                        <td>Ricardo Lima</td>
+                        <td>cliente15@example.com</td>
+                        <td>(567) 890-1234</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+<script>
+    // Inicialize a DataTable para a tabela de clientes
+    $(document).ready(function () {
+        $('#clientsTable').DataTable();
+    });
+</script>
+</html>

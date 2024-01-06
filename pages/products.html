@@ -1,0 +1,143 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Verificar se o usuário está autenticado
+        var isAuthenticated = sessionStorage.getItem('authenticated');
+
+        // Se não estiver autenticado, redirecione para a página de login
+        if (!isAuthenticated || isAuthenticated !== 'true') {
+            window.location.href = '../index.html';
+        }
+    });
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/products.css">
+    <link rel="stylesheet" href="../assets/styles/sidebar.css">
+    <script src="../assets/scripts/sidebar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <title>Produtos</title>
+</head>
+<body>
+    <main class="main">
+        <div class="main-content">
+            <h1>Página de Produtos</h1>
+            <table id="productsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Estoque</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Produto A</td>
+                        <td>$19.99</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Produto B</td>
+                        <td>$29.99</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Produto C</td>
+                        <td>$39.99</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Produto D</td>
+                        <td>$49.99</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Produto E</td>
+                        <td>$59.99</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Produto F</td>
+                        <td>$69.99</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Produto G</td>
+                        <td>$79.99</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Produto H</td>
+                        <td>$89.99</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Produto I</td>
+                        <td>$99.99</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Produto J</td>
+                        <td>$109.99</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Produto K</td>
+                        <td>$119.99</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Produto L</td>
+                        <td>$129.99</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Produto M</td>
+                        <td>$139.99</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Produto N</td>
+                        <td>$149.99</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Produto O</td>
+                        <td>$159.99</td>
+                        <td>8</td>
+                    </tr>
+                    <!-- Adicione mais linhas conforme necessário -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+<script>
+    // Inicialize a DataTable para a tabela de produtos
+    $(document).ready(function () {
+        $('#productsTable').DataTable();
+    });
+</script>
+</html>

@@ -1,0 +1,122 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family: sans-serif;
+    color:#fff;
+
+}
+
+.border{
+    border:1px solid red;
+
+}
+
+.sidebar-header{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.sidebar{
+    background-color: #333;;
+    position: fixed;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 180px;
+    height:100%;
+    padding: 40px 10px 30px 10px;
+    border-right: 1px solid #2f3336;
+    transition: all 0.28s;
+}
+
+.logo-img{
+    width: 45px;
+    min-height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s;
+    margin-left: 50px;
+}
+
+.logo-img:hover{
+    transform: scale(1.5);
+}
+
+.sidebar button{
+    height: 60px;
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    color: inherit;
+    cursor:pointer;
+    text-align: left;
+    padding: 0;
+
+}
+
+.sidebar button > span {
+    display: inline-flex;
+    align-items: center;
+    gap:12px;
+    height: 48px;
+    padding: 0 16px 0 12px;
+    border-radius: 24px;
+    line-height: 1;
+    transition: all 0.02s;
+}
+
+.sidebar button:hover > span {
+    background-color: rgba(255,255,255,0.08);
+
+}
+
+.sidebar button i{
+    position: relative;
+    font-size:28px;
+    transition: 0.2s;
+}
+
+.sidebar button span{
+    font-size: 16px;
+}
+
+
+.sidebar >nav{
+    flex:1 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/*  Ajuste sidebar com apenas icons*/
+@media(width <920px){
+    .sidebar{
+        width: 72px;
+    }
+
+    .sidebar button > span{
+        width: 50px;
+    };
+
+    .sidebar button > span >span{
+        opacity: 0;
+        visibility: hidden;
+    };
+}
+
+.main{
+    margin-left: 250px;
+    margin-right: 6px ;
+    overflow: hidden;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.5s;
+    color:#333
+}

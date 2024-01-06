@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#clientsTable {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#clientsTable th, #clientsTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#clientsTable th {
+    background-color: #333;
+    color: #fff;
+}
+
+#clientsTable tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.dataTables_filter {
+    text-align: right;
+    margin: 20px;
+}
+
+.dataTables_filter label {
+    margin-right: 10px;
+    color: #333;
+}
+
+.dataTables_filter input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+/* Estilo para DataTables pagination */
+.dataTables_paginate {
+    text-align: center;
+}
+.dataTables_paginate a {
+    display: inline-block;
+    padding: 8px;
+    margin: 2px;
+    border: 1px solid #ddd;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dataTables_paginate a:hover {
+    background-color: #f5f5f5;
+}
+
+.dataTables_paginate .current {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+}

@@ -1,0 +1,37 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Verificar se o usuário está autenticado
+        var isAuthenticated = sessionStorage.getItem('authenticated');
+
+        // Se não estiver autenticado, redirecione para a página de login
+        if (!isAuthenticated || isAuthenticated !== 'true') {
+            window.location.href = '../index.html';
+        }
+
+    });
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" />
+    <script src="../assets/scripts/sidebar.js"></script>
+    <title>Home</title>
+</head>
+
+<body>
+
+
+    <main class="main">
+        <div class="main-content">
+            <h1>Bem-vindo à Página Principal</h1>
+            <p>Esta é a área de conteúdo principal.</p>
+        </div>
+    </main>
+</body>
+
+</html>

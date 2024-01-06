@@ -1,0 +1,156 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Verificar se o usuário está autenticado
+        var isAuthenticated = sessionStorage.getItem('authenticated');
+
+        // Se não estiver autenticado, redirecione para a página de login
+        if (!isAuthenticated || isAuthenticated !== 'true') {
+            window.location.href = '../index.html';
+        }
+    });
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/sales.css">
+    <link rel="stylesheet" href="../assets/styles/sidebar.css">
+    <script src="../assets/scripts/sidebar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <title>Vendas</title>
+</head>
+
+<body>
+
+    <main class="main">
+        <div class="main-content">
+            <h1>Página de Vendas</h1>
+            <table id="salesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data da Venda</th>
+                        <th>Cliente</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2024-01-06</td>
+                        <td>Cliente 1</td>
+                        <td>$150.00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2024-01-07</td>
+                        <td>Cliente 2</td>
+                        <td>$120.00</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>2024-01-08</td>
+                        <td>Cliente 3</td>
+                        <td>$200.00</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>2024-01-09</td>
+                        <td>Cliente 4</td>
+                        <td>$80.00</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>2024-01-10</td>
+                        <td>Cliente 5</td>
+                        <td>$300.00</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>2024-01-11</td>
+                        <td>Cliente 6</td>
+                        <td>$50.00</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>2024-01-12</td>
+                        <td>Cliente 7</td>
+                        <td>$180.00</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>2024-01-13</td>
+                        <td>Cliente 8</td>
+                        <td>$90.00</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>2024-01-14</td>
+                        <td>Cliente 9</td>
+                        <td>$240.00</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>2024-01-15</td>
+                        <td>Cliente 10</td>
+                        <td>$110.00</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>2024-01-16</td>
+                        <td>Cliente 11</td>
+                        <td>$170.00</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>2024-01-17</td>
+                        <td>Cliente 12</td>
+                        <td>$130.00</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>2024-01-18</td>
+                        <td>Cliente 13</td>
+                        <td>$260.00</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>2024-01-19</td>
+                        <td>Cliente 14</td>
+                        <td>$95.00</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>2024-01-20</td>
+                        <td>Cliente 15</td>
+                        <td>$180.00</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>2024-01-21</td>
+                        <td>Cliente 16</td>
+                        <td>$200.00</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>2024-01-22</td>
+                        <td>Cliente 17</td>
+                        <td>$150.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+<script>
+    // Inicialize a DataTable para a tabela de vendas
+    $(document).ready(function () {
+        $('#salesTable').DataTable();
+    });
+</script>
+</html>
