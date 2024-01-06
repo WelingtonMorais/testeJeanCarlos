@@ -60,11 +60,6 @@ Versão Estável
 
 Nenhum
 
-## Instalação
-Clonar o repositório:
-
-git clone https://github.com/seu-usuario/seu-projeto.git
-
 ## Como Usar
 Inicialize o arquivo index.hml localizado na raiz do projeto no seu navegador.
 
